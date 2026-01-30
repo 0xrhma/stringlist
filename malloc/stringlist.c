@@ -12,7 +12,6 @@ void stringlist_append(struct stringlist* list, const char* str) {
     void* dest = list->buffer + list->size;
     strcpy(dest, str);
     list->size += csize;
-    list->buffer[list->size-1] = '\0';
     list->count++;
 }
 
