@@ -44,7 +44,6 @@ void stringlist_append_unsafe(struct stringlist* list, const char* str) {
     void* dest = list->buffer + list->cpos;
     strcpy(dest, str);
     list->cpos += csize;
-    list->buffer[list->cpos - 1] = '\0';
     list->count++;
 }
 
